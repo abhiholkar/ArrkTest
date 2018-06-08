@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ArrkTest</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="name">Name :</string>
+    <string name="height">Height (m):</string>
+    <string name="weight_kgs">Weight (kgs) :</string>
+    <string name="date_text">Date :</string>
+    <string name="time_text">Time :</string>
+    <string name="try_again">Try Again</string>
+    <string name="check_network_error">Please check network and try Again !</string>
+    <string name="general_error">General Error, API is down!! </string>
+</resources>
