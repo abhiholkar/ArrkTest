@@ -14,6 +14,7 @@
 - Based on clean Architecture principle - seperation of concerns, presenter uses a use case which
   interacts with repository to get list of star war characters.
 - To make app reactive compliant RxJava is used.
+- Retrofit is used for Network interaction and GSON for parsing response.
 - Views are mostly injected/bind using ButterKnife and Recycler View uses for displaying List.
 - Junit Test cases based on Mockito are used for Presenter and Repository
 
