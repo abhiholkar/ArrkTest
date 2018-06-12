@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class DateTimeUtils {
 
-    public static String getDate(String datetimeString) {
+    public String getDate(String datetimeString) {
         String dateString = datetimeString;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -22,8 +22,8 @@ public class DateTimeUtils {
 
     }
 
-    public static String getTime(String datetimeString) {
-        String timeString = "datetimeString";
+    public String getTime(String datetimeString) {
+        String timeString = datetimeString;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ");
         try {
             Date date = sdf.parse(datetimeString.replaceAll("Z$", "+0000000"));

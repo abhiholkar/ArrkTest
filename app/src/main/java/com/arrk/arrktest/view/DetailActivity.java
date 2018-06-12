@@ -1,6 +1,7 @@
 package com.arrk.arrktest.view;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.TextView;
 
 import com.arrk.arrktest.R;
@@ -51,10 +52,16 @@ public class DetailActivity extends BaseActivity {
 
     private void showDetail(StarWarCharacter character) {
         nameVal.setText(character.getName());
-        heightVal.setText(MeasureUtils.convertToMeters(character.getHeight()));
+        MeasureUtils measureUtils = new MeasureUtils();
+        String heightInMeters = measureUtils.convertToMeters(character.getHeight());
+        heightInMeters = !TextUtils.isEmpty(heightInMeters) ? heightInMeters : getString(R.string.not_available);
+        heightVal.setText(heightInMeters);
         weightVal.setText(character.getMass());
-        dateVal.setText(DateTimeUtils.getDate(character.getCreated()));
-        timeVal.setText(DateTimeUtils.getTime(character.getCreated()));
+        DateTimeUtils dateTimeUtils = new DateTimeUtils();
+        String created = character.getCreated();
+        created = !TextUtils.isEmpty(created) ? created : getString(R.string.not_available);
+        dateVal.setText(dateTimeUtils.getDate(created));
+        timeVal.setText(dateTimeUtils.getTime(created));
 
     }
 
