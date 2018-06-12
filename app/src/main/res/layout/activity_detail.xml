@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg"
     android:orientation="vertical"
     tools:context="com.arrk.arrktest.view.DetailActivity">
 
@@ -17,18 +16,12 @@
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:text="@string/name"
-            android:textColor="@color/color_label_text" />
+            style="@style/arklabel"
+            android:text="@string/name" />
 
         <TextView
             android:id="@+id/nameval"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text" />
+            style="@style/arkvalue" />
 
     </LinearLayout>
 
@@ -41,18 +34,12 @@
 
         <TextView
             android:id="@+id/height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:text="@string/height"
-            android:textColor="@color/color_label_text" />
+            style="@style/arklabel"
+            android:text="@string/height" />
 
         <TextView
             android:id="@+id/heightval"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text" />
+            style="@style/arkvalue" />
 
     </LinearLayout>
 
@@ -65,18 +52,12 @@
 
         <TextView
             android:id="@+id/weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:text="@string/weight_kgs"
-            android:textColor="@color/color_label_text" />
+            style="@style/arklabel"
+            android:text="@string/weight_kgs" />
 
         <TextView
             android:id="@+id/weightval"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text" />
+            style="@style/arkvalue" />
 
     </LinearLayout>
 
@@ -89,18 +70,12 @@
 
         <TextView
             android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:text="@string/date_text"
-            android:textColor="@color/color_label_text" />
+            style="@style/arklabel"
+            android:text="@string/date_text" />
 
         <TextView
             android:id="@+id/dateval"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text" />
+            style="@style/arkvalue" />
 
     </LinearLayout>
 
@@ -113,18 +88,12 @@
 
         <TextView
             android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:text="@string/time_text"
-            android:textColor="@color/color_label_text" />
+            style="@style/arklabel"
+            android:text="@string/time_text" />
 
         <TextView
             android:id="@+id/timeval"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text" />
+            style="@style/arkvalue"/>
 
     </LinearLayout>
 

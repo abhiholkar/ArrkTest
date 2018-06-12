@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/common_margin"
-    android:background="@drawable/rectangle"
-    android:orientation="vertical">
+    style="@style/itemcontainer">
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/common_padding"
-        android:textColor="@color/color_item_text" />
+        style="@style/item" />
 
 </LinearLayout>
