@@ -11,7 +11,7 @@ import retrofit2.http.GET;
 
 public interface APIService {
 
-    public final String BASE_URL = "https://swapi.co/api/";
+    String BASE_URL = "https://swapi.co/api/";
 
 
     @GET("people/")

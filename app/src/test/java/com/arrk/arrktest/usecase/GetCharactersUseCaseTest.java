@@ -15,8 +15,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-;
-
 /**
  * Created by abhiholkar on 08/06/2018.
  */

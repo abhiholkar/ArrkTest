@@ -8,4 +8,4 @@ public enum APIError {
 
     GENERAL_ERROR,
     NETWORK_ERROR
-};
+}

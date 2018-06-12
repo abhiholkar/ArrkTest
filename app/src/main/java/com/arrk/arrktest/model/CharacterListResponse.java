@@ -42,7 +42,7 @@ public class CharacterListResponse implements Parcelable {
         this.count = in.readInt();
         this.next = in.readString();
         this.previous = in.readString();
-        this.results = new ArrayList<StarWarCharacter>();
+        this.results = new ArrayList<>();
         in.readList(this.results, StarWarCharacter.class.getClassLoader());
     }
 
