@@ -9,122 +9,122 @@
 
     <!-- Name-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/common_margin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:orientation="horizontal">
 
 
         <TextView
-            android:textColor="@color/color_label_text"
             android:id="@+id/name"
-            android:padding="@dimen/common_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name" />
+            android:padding="@dimen/common_padding"
+            android:text="@string/name"
+            android:textColor="@color/color_label_text" />
 
         <TextView
             android:id="@+id/nameval"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:textColor="@color/color_value_text" />
 
     </LinearLayout>
 
     <!-- height-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/common_margin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/height"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/height" />
+            android:padding="@dimen/common_padding"
+            android:text="@string/height"
+            android:textColor="@color/color_label_text" />
 
         <TextView
             android:id="@+id/heightval"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:textColor="@color/color_value_text" />
 
     </LinearLayout>
 
     <!-- Mass/Weight-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/common_margin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/weight"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/weight_kgs" />
+            android:padding="@dimen/common_padding"
+            android:text="@string/weight_kgs"
+            android:textColor="@color/color_label_text" />
 
         <TextView
             android:id="@+id/weightval"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:textColor="@color/color_value_text" />
 
     </LinearLayout>
 
     <!-- Date-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/common_margin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/date"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/date_text" />
+            android:padding="@dimen/common_padding"
+            android:text="@string/date_text"
+            android:textColor="@color/color_label_text" />
 
         <TextView
             android:id="@+id/dateval"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:textColor="@color/color_value_text" />
 
     </LinearLayout>
 
     <!-- Time-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/common_margin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/time"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/time_text" />
+            android:padding="@dimen/common_padding"
+            android:text="@string/time_text"
+            android:textColor="@color/color_label_text" />
 
         <TextView
             android:id="@+id/timeval"
-            android:padding="@dimen/common_padding"
-            android:textColor="@color/color_value_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:textColor="@color/color_value_text" />
 
     </LinearLayout>
 

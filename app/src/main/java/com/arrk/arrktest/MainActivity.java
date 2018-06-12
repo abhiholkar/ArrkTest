@@ -1,6 +1,5 @@
 package com.arrk.arrktest;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,7 +29,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity implements MainView,OnItemClickListener<StarWarCharacter> {
+public class MainActivity extends BaseActivity implements MainView, OnItemClickListener<StarWarCharacter> {
 
     @BindView(R.id.prgress)
     ProgressBar progressBar;
@@ -52,13 +51,12 @@ public class MainActivity extends BaseActivity implements MainView,OnItemClickLi
     MainPresenter mainPresenter;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        ((ArrkTestApp)getApplication()).getAppComponent().inject(this);
+        ((ArrkTestApp) getApplication()).getAppComponent().inject(this);
     }
 
     @Override
@@ -79,7 +77,7 @@ public class MainActivity extends BaseActivity implements MainView,OnItemClickLi
     public void showError(APIError error) {
         progressBar.setVisibility(View.GONE);
         networkErrorView.setVisibility(View.VISIBLE);
-        switch (error){
+        switch (error) {
 
             case NETWORK_ERROR:
                 errorText.setText(getString(R.string.check_network_error));
@@ -101,7 +99,7 @@ public class MainActivity extends BaseActivity implements MainView,OnItemClickLi
     public void showList(List<StarWarCharacter> characterList) {
         hideLoading();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        StarwarListAdapter adapter = new StarwarListAdapter(characterList,this);
+        StarwarListAdapter adapter = new StarwarListAdapter(characterList, this);
         recyclerView.setAdapter(adapter);
     }
 
@@ -109,13 +107,13 @@ public class MainActivity extends BaseActivity implements MainView,OnItemClickLi
     @Override
     public void onItemClicked(StarWarCharacter item) {
         Intent detailIntent = new Intent(this, DetailActivity.class);
-        detailIntent.putExtra(BundleContants.STAR_CHARACTER_KEY,item);
+        detailIntent.putExtra(BundleContants.STAR_CHARACTER_KEY, item);
         startActivity(detailIntent);
 
     }
 
     @OnClick(R.id.try_again)
-    public void onTryAgain(){
+    public void onTryAgain() {
         networkErrorView.setVisibility(View.GONE);
         showLoading();
         mainPresenter.getCharacters();

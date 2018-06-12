@@ -10,6 +10,17 @@ import java.util.List;
 
 public class StarWarCharacter implements Parcelable {
 
+    public static final Parcelable.Creator<StarWarCharacter> CREATOR = new Parcelable.Creator<StarWarCharacter>() {
+        @Override
+        public StarWarCharacter createFromParcel(Parcel source) {
+            return new StarWarCharacter(source);
+        }
+
+        @Override
+        public StarWarCharacter[] newArray(int size) {
+            return new StarWarCharacter[size];
+        }
+    };
     @SerializedName("name")
     @Expose
     private String name;
@@ -58,6 +69,28 @@ public class StarWarCharacter implements Parcelable {
     @SerializedName("url")
     @Expose
     private String url;
+
+    public StarWarCharacter() {
+    }
+
+    protected StarWarCharacter(Parcel in) {
+        this.name = in.readString();
+        this.height = in.readString();
+        this.mass = in.readString();
+        this.hairColor = in.readString();
+        this.skinColor = in.readString();
+        this.eyeColor = in.readString();
+        this.birthYear = in.readString();
+        this.gender = in.readString();
+        this.homeworld = in.readString();
+        this.films = in.createStringArrayList();
+        this.species = in.createStringArrayList();
+        this.vehicles = in.createStringArrayList();
+        this.starships = in.createStringArrayList();
+        this.created = in.readString();
+        this.edited = in.readString();
+        this.url = in.readString();
+    }
 
     public String getName() {
         return name;
@@ -211,38 +244,4 @@ public class StarWarCharacter implements Parcelable {
         dest.writeString(this.edited);
         dest.writeString(this.url);
     }
-
-    public StarWarCharacter() {
-    }
-
-    protected StarWarCharacter(Parcel in) {
-        this.name = in.readString();
-        this.height = in.readString();
-        this.mass = in.readString();
-        this.hairColor = in.readString();
-        this.skinColor = in.readString();
-        this.eyeColor = in.readString();
-        this.birthYear = in.readString();
-        this.gender = in.readString();
-        this.homeworld = in.readString();
-        this.films = in.createStringArrayList();
-        this.species = in.createStringArrayList();
-        this.vehicles = in.createStringArrayList();
-        this.starships = in.createStringArrayList();
-        this.created = in.readString();
-        this.edited = in.readString();
-        this.url = in.readString();
-    }
-
-    public static final Parcelable.Creator<StarWarCharacter> CREATOR = new Parcelable.Creator<StarWarCharacter>() {
-        @Override
-        public StarWarCharacter createFromParcel(Parcel source) {
-            return new StarWarCharacter(source);
-        }
-
-        @Override
-        public StarWarCharacter[] newArray(int size) {
-            return new StarWarCharacter[size];
-        }
-    };
 }

@@ -8,10 +8,10 @@ import android.text.TextUtils;
 
 public class MeasureUtils {
 
-    public static String convertToMeters(String cms){
+    public static String convertToMeters(String cms) {
         String val = "";
-        if(!TextUtils.isEmpty(cms)) {
-             val = String.valueOf((Float.valueOf(cms) / 100));
+        if (!TextUtils.isEmpty(cms)) {
+            val = String.valueOf((Float.valueOf(cms) / 100));
         }
         return val;
     }

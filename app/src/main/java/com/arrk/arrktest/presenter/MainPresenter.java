@@ -19,7 +19,7 @@ import io.reactivex.observers.DisposableObserver;
  * Created by abhiholkar on 07/06/2018.
  */
 
-public class MainPresenter extends BasePresenter{
+public class MainPresenter extends BasePresenter {
 
     GetCharactersUseCase useCase;
 
@@ -28,8 +28,8 @@ public class MainPresenter extends BasePresenter{
     MainView mainView;
 
     @Inject
-    public MainPresenter(Context context,GetCharactersUseCase useCase) {
-        this.context=context;
+    public MainPresenter(Context context, GetCharactersUseCase useCase) {
+        this.context = context;
         this.useCase = useCase;
     }
 

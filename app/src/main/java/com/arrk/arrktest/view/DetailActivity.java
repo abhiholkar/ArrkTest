@@ -1,11 +1,6 @@
 package com.arrk.arrktest.view;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.TextView;
 
 import com.arrk.arrktest.R;
@@ -43,7 +38,7 @@ public class DetailActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         ButterKnife.bind(this);
-        if(getIntent().hasExtra(BundleContants.STAR_CHARACTER_KEY)) {
+        if (getIntent().hasExtra(BundleContants.STAR_CHARACTER_KEY)) {
             character = getIntent().getParcelableExtra(BundleContants.STAR_CHARACTER_KEY);
             showDetail(character);
         }
@@ -54,7 +49,7 @@ public class DetailActivity extends BaseActivity {
         super.onResume();
     }
 
-    private void showDetail(StarWarCharacter character){
+    private void showDetail(StarWarCharacter character) {
         nameVal.setText(character.getName());
         heightVal.setText(MeasureUtils.convertToMeters(character.getHeight()));
         weightVal.setText(character.getMass());

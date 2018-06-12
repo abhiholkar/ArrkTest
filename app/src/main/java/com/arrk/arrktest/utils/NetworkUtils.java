@@ -4,8 +4,6 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import javax.inject.Inject;
-
 /**
  * Created by abhiholkar on 07/06/2018.
  */

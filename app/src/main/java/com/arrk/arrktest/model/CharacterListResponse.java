@@ -11,6 +11,17 @@ import java.util.List;
 
 public class CharacterListResponse implements Parcelable {
 
+    public static final Parcelable.Creator<CharacterListResponse> CREATOR = new Parcelable.Creator<CharacterListResponse>() {
+        @Override
+        public CharacterListResponse createFromParcel(Parcel source) {
+            return new CharacterListResponse(source);
+        }
+
+        @Override
+        public CharacterListResponse[] newArray(int size) {
+            return new CharacterListResponse[size];
+        }
+    };
     @SerializedName("count")
     @Expose
     private int count;
@@ -23,6 +34,17 @@ public class CharacterListResponse implements Parcelable {
     @SerializedName("results")
     @Expose
     private List<StarWarCharacter> results = null;
+
+    public CharacterListResponse() {
+    }
+
+    protected CharacterListResponse(Parcel in) {
+        this.count = in.readInt();
+        this.next = in.readString();
+        this.previous = in.readString();
+        this.results = new ArrayList<StarWarCharacter>();
+        in.readList(this.results, StarWarCharacter.class.getClassLoader());
+    }
 
     public int getCount() {
         return count;
@@ -68,27 +90,4 @@ public class CharacterListResponse implements Parcelable {
         dest.writeString(this.previous);
         dest.writeList(this.results);
     }
-
-    public CharacterListResponse() {
-    }
-
-    protected CharacterListResponse(Parcel in) {
-        this.count = in.readInt();
-        this.next = in.readString();
-        this.previous = in.readString();
-        this.results = new ArrayList<StarWarCharacter>();
-        in.readList(this.results, StarWarCharacter.class.getClassLoader());
-    }
-
-    public static final Parcelable.Creator<CharacterListResponse> CREATOR = new Parcelable.Creator<CharacterListResponse>() {
-        @Override
-        public CharacterListResponse createFromParcel(Parcel source) {
-            return new CharacterListResponse(source);
-        }
-
-        @Override
-        public CharacterListResponse[] newArray(int size) {
-            return new CharacterListResponse[size];
-        }
-    };
 }

@@ -1,7 +1,5 @@
 package com.arrk.arrktest.presenter;
 
-import android.view.View;
-
 import com.arrk.arrktest.view.IView;
 
 /**

@@ -21,7 +21,7 @@ import java.util.List;
 import io.reactivex.Observable;
 import io.reactivex.observers.TestObserver;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -43,7 +43,7 @@ public class MainPresenterTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        presenter = new MainPresenter(context,useCase);
+        presenter = new MainPresenter(context, useCase);
     }
 
     @After
@@ -77,7 +77,7 @@ public class MainPresenterTest {
     @Test
     public void bindView() throws Exception {
         presenter.bindView(mainView);
-        assertEquals(mainView,presenter.mainView);
+        assertEquals(mainView, presenter.mainView);
     }
 
     @Test

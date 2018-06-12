@@ -43,14 +43,14 @@ public class AppModule {
 
     @Provides
     @Singleton
-    MainPresenter providesMainPresenter(Context context,GetCharactersUseCase useCase) {
-        return new MainPresenter(context,useCase);
+    MainPresenter providesMainPresenter(Context context, GetCharactersUseCase useCase) {
+        return new MainPresenter(context, useCase);
     }
 
     @Provides
     @Singleton
     Retrofit providesRetrofit() {
-        Retrofit retrofit= new Retrofit.Builder().baseUrl(APIService.BASE_URL)
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(APIService.BASE_URL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -59,12 +59,12 @@ public class AppModule {
 
     @Provides
     @Singleton
-    GetCharactersUseCase providesGetCharactersUseCase(CharactersRepository charactersRepository){
-        return  new GetCharactersUseCase(charactersRepository);
+    GetCharactersUseCase providesGetCharactersUseCase(CharactersRepository charactersRepository) {
+        return new GetCharactersUseCase(charactersRepository);
     }
 
     @Provides
-    CharactersRepository providesCharacterRepository(Retrofit retrofit){
+    CharactersRepository providesCharacterRepository(Retrofit retrofit) {
         return new CharactersRepository(retrofit);
     }
 

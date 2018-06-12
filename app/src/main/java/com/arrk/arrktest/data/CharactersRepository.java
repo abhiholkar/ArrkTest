@@ -6,11 +6,9 @@ import com.arrk.arrktest.net.APIService;
 
 import java.util.List;
 
-
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
-import io.reactivex.ObservableSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
@@ -30,16 +28,16 @@ public class CharactersRepository {
         this.retrofit = retrofit;
     }
 
-    public Observable<List<StarWarCharacter>> getCharacterList(){
+    public Observable<List<StarWarCharacter>> getCharacterList() {
 
-       return retrofit.create(APIService.class).getCharacterList()
+        return retrofit.create(APIService.class).getCharacterList()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).map(new Function<CharacterListResponse, List<StarWarCharacter>>() {
-                   @Override
-                   public List<StarWarCharacter> apply(CharacterListResponse characterListResponse) throws Exception {
-                       if(characterListResponse==null ) throw new NullPointerException();
-                       return characterListResponse.getResults();
-                   }
-               });
+                    @Override
+                    public List<StarWarCharacter> apply(CharacterListResponse characterListResponse) throws Exception {
+                        if (characterListResponse == null) throw new NullPointerException();
+                        return characterListResponse.getResults();
+                    }
+                });
     }
 }

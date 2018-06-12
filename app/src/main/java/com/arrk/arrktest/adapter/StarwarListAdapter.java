@@ -5,15 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.arrk.arrktest.R;
 import com.arrk.arrktest.model.StarWarCharacter;
 import com.arrk.arrktest.view.OnItemClickListener;
 
 import java.util.List;
-
-import butterknife.OnClick;
 
 /**
  * Created by abhiholkar on 07/06/2018.
@@ -51,7 +48,7 @@ public class StarwarListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
 
     @Override
     public int getItemCount() {
-        return characterList.isEmpty()? 0 : characterList.size();
+        return characterList.isEmpty() ? 0 : characterList.size();
     }
 
 }

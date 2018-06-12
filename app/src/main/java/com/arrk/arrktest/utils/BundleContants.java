@@ -6,5 +6,5 @@ package com.arrk.arrktest.utils;
 
 public class BundleContants {
 
-    public static String STAR_CHARACTER_KEY="STAR_CHARACTER_KEY";
+    public static String STAR_CHARACTER_KEY = "STAR_CHARACTER_KEY";
 }

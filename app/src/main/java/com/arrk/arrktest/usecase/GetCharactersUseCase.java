@@ -19,10 +19,10 @@ public class GetCharactersUseCase {
 
     @Inject
     public GetCharactersUseCase(CharactersRepository repository) {
-        charactersRepository =  repository;
+        charactersRepository = repository;
     }
 
-    public Observable<List<StarWarCharacter>> getCharacters(){
+    public Observable<List<StarWarCharacter>> getCharacters() {
         return charactersRepository.getCharacterList();
     }
 }
